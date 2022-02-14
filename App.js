@@ -16,7 +16,7 @@ export default function SqShopping() {
     //createtable
     useEffect(() => {
         db.transaction(tx => {
-            tx.executeSql('create table if not exists shoppinglist (id integer primary key not null, product text, amount int);');
+            tx.executeSql('create table if not exists shoppinglist (id integer primary key not null, product text, amount text);');
         });
         updateList();
     }, []);
@@ -27,7 +27,7 @@ export default function SqShopping() {
             Alert.alert('input empty')
         } else{
         db.transaction(tx => {
-            tx.executeSql('insert into shoppinglist (product, amount) values (?, ?);', [product, parseInt(amount)]);
+            tx.executeSql('insert into shoppinglist (product, amount) values (?, ?);', [product, amount]);
         }, null, updateList
         )
         setProduct('')
