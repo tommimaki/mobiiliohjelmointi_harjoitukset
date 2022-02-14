@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "laskinMuistilla",
-    "slug": "laskinApp",
+    "name": "SQL Shopping",
+    "slug": "shopping",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
